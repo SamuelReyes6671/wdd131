@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="First page with Java Script">
-    <meta author="Samuel Reyes">
+    <meta name="description" content="First page with JavaScript">
+    <meta name="author" content="Samuel Reyes">
     <title>WDD 131 - Dynamic Web Fundamentals - Samuel Reyes</title>
     
     <link rel="stylesheet" href="styles/base.css">
 
-    <!-- Corrección: Utilizar src en lugar de href para el script -->
     <script class="defer" src="scripts/getdates.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,47 +17,52 @@
 </head>
 <body>
     <header>
-        <h1>WDD 131:  Dynamic Web Fundamentals - Samuel Reyes</h1>
+        <h1>WDD 131: Dynamic Web Fundamentals - Samuel Reyes</h1>
         <nav>
             <ul>
                 <li><a href="https://www.linkedin.com/in/samuel-reyes-condori-43195821a">LinkedIn</a></li>
                 <li><a href="https://byui.instructure.com/">I-Learn</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=spa">Scripture</a></li>
-                <li><a href="" class="active">Final Project</a></li>
+                <li><a href="#" class="active">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="card">
-            <h2>Sección 1</h2>
-            <p>Contenido de la sección 1...</p>
-            <img src="imagen1.jpg" alt="Imagen 1">
+            <h2>Section 1</h2>
+            <p>Content of section 1...</p>
+            <img src="imagen1.jpg" alt="Image 1">
             <ul>
-                <li><a href="recurso1.html">Enlace a Recurso 1</a></li>
-                <li><a href="recurso2.html">Enlace a Recurso 2</a></li>
-                <li><a href="recurso3.html">Enlace a Recurso 3</a></li>
+                <li><a href="recurso1.html">Link to Resource 1</a></li>
+                <li><a href="recurso2.html">Link to Resource 2</a></li>
+                <li><a href="recurso3.html">Link to Resource 3</a></li>
             </ul>
         </section>
         
         <section class="card">
-            <h2>Sección 2</h2>
-            <p>Contenido de la sección 2...</p>
-            <img src="imagen2.jpg" alt="Imagen 2">
+            <h2>Section 2</h2>
+            <p>Content of section 2...</p>
+            <img src="imagen2.jpg" alt="Image 2">
             <ul>
-                <li><a href="recurso4.html">Enlace a Recurso 4</a></li>
-                <li><a href="recurso5.html">Enlace a Recurso 5</a></li>
-                <li><a href="recurso6.html">Enlace a Recurso 6</a></li>
+                <li><a href="recurso4.html">Link to Resource 4</a></li>
+                <li><a href="recurso5.html">Link to Resource 5</a></li>
+                <li><a href="recurso6.html">Link to Resource 6</a></li>
             </ul>
         </section>
     </main>
 
     <footer>
         <p>
-            <span id="currentyear"></span>
-            &copy; Samuel Reyes, Peru.
+            <span id="currentyear"></span> &copy; Samuel Reyes, Peru.
         </p>
-        <p id="lastModified"></p>
+        <p id="lastModified">Última modificación: </p>
     </footer>
+
+    <script>
+        // JavaScript para obtener el año actual y la fecha de última modificación
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent += document.lastModified;
+    </script>
 </body>
 </html>
