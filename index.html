@@ -6,19 +6,59 @@
     <meta description="First page with Java Script">
     <meta author="Samuel Reyes">
     <title>WDD 131 - Dynamic Web Fundamentals - Samuel Reyes</title>
+    
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- Corrección: Utilizar src en lugar de href para el script -->
+    <script class="defer" src="scripts/getdates.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>WDD 131:  Dynamic Web Fundamentals - Samuel Reyes</h1>
         <nav>
-            <a href="www.linkedin.com/in/samuel-reyes-condori-43195821a">Linkedln</a>
-            <a href="https://byui.instructure.com/.">I-Learn</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=spa">Scripture</a>
-            <a href="">Final Proyect</a>
-
+            <ul>
+                <li><a href="https://www.linkedin.com/in/samuel-reyes-condori-43195821a">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=spa">Scripture</a></li>
+                <li><a href="" class="active">Final Project</a></li>
+            </ul>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <section class="card">
+            <h2>Sección 1</h2>
+            <p>Contenido de la sección 1...</p>
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <ul>
+                <li><a href="recurso1.html">Enlace a Recurso 1</a></li>
+                <li><a href="recurso2.html">Enlace a Recurso 2</a></li>
+                <li><a href="recurso3.html">Enlace a Recurso 3</a></li>
+            </ul>
+        </section>
+        
+        <section class="card">
+            <h2>Sección 2</h2>
+            <p>Contenido de la sección 2...</p>
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <ul>
+                <li><a href="recurso4.html">Enlace a Recurso 4</a></li>
+                <li><a href="recurso5.html">Enlace a Recurso 5</a></li>
+                <li><a href="recurso6.html">Enlace a Recurso 6</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            &copy; Samuel Reyes, Peru.
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
