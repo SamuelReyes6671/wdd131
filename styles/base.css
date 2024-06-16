@@ -1,56 +1,62 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-header{
+
+header {
     background-color: #bbb;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-
 }
-main{
+
+main {
     margin: 0 auto;
+    max-width: 1200px; /* Ejemplo de max-width ajustado según tus necesidades */
+    padding: 20px; /* Añade un espacio interno */
 }
 
-.active{
+.active {
     color: yellow;
 }
-nav{
+
+nav {
     color: #36454f;
     margin: 0 auto;
 }
 
-h1{
-    font-size:2rem;
+h1 {
+    font-size: 2rem;
 }
 
-nav a{
+nav a {
     display: block;
     color: #fff;
     text-align: center;
-    padding:1rem;
-    text-decoration:none;
+    padding: 1rem;
+    text-decoration: none;
 }
 
-nav a:hover{
-    text-decoration:overline;
+nav a:hover {
+    text-decoration: overline;
     border: 1px solid #fff;
-} 
-@media (min-width: 640px){
-    nav ul{
+}
+
+@media (min-width: 640px) {
+    nav ul {
         display: flex;
         justify-content: space-around;
         list-style-type: none;
     }
-    nav ul li{
-        flex:1 1 100%;
+    nav ul li {
+        flex: 1 1 100%;
     }
 }
