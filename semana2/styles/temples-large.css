@@ -1,0 +1,16 @@
+/* Estilos específicos para pantallas más grandes */
+@media only screen and (min-width: 768px) {
+    nav ul {
+        justify-content: flex-start;
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    figure {
+        text-align: left;
+    }
+}
