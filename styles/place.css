@@ -1,0 +1,71 @@
+/* Reset de márgenes para el body y otros elementos */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Establecer color de texto blanco y fondo oscuro */
+body {
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Diseño de grid con fila automática para header y footer */
+    min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+    position: relative; /* Posición relativa para alinear elementos hijos */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Fondo oscuro para el encabezado */
+    padding: 20px;
+    text-align: center;
+    grid-row: 1; /* Se coloca en la primera fila */
+    grid-column: 1 / -1; /* Ocupa todas las columnas */
+}
+
+header h1 {
+    margin-bottom: 10px; /* Espacio inferior para separación */
+    font-size: 2.5rem; /* Tamaño grande para el título principal */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+}
+
+/* Estilo para la imagen de fondo */
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/CUZCO-MACCHUPICHU.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Opacidad para que el texto sea legible */
+    z-index: -1; /* Poner detrás de otros elementos */
+}
+
+/* Estilos para los grids en las esquinas */
+.grid-top-left,
+.grid-bottom-right {
+    position: absolute;
+    width: 150px; /* Ancho del grid */
+    height: 150px; /* Alto del grid */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    border-radius: 10px; /* Borde redondeado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grid-top-left {
+    top: 20px; /* Alineación en la esquina superior izquierda */
+    left: 20px; /* Alineación en la esquina superior izquierda */
+}
+
+.grid-bottom-right {
+    bottom: 20px; /* Alineación en la esquina inferior derecha */
+    right: 20px; /* Alineación en la esquina inferior derecha */
+}

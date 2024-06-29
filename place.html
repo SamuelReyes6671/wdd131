@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the essentials of JavaScript on this introductory webpage. Explore how JavaScript enhances web interactivity, manipulates DOM elements, and handles events effectively.">
+    <meta name="author" content="Samuel Reyes">
+    <title>WDD 131 - Dynamic Web Fundamentals - Samuel Reyes</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Macchu Picchu</h1>
+        <img src="images/CUZCO-MACCHUPICHU.jpeg" alt="" width="100%">
+    </header>
+    <main>
+        
+        <section>
+            <h2>Data</h2>
+            <ul>
+                <li>Populacion</li>
+                <li>Capital</li>
+                <li>Lenguages</li>
+                <li>Currency</li>
+                <li>Time Zone</li>
+                <li>Calling Code: +261</li>
+                <li>Internet TLD: .mg</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Weather</h2>
+            <ul>
+                <li>Temperature: 10 °C</li>
+                <li>Conditions:</li>
+                <li>Wind:</li>
+                <li>Wind Chill:</li>
+            </ul>
+        </section>
+        <section class="grid-bottom-right">
+            <!-- Contenido opcional para la sección inferior derecha -->
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span> &copy; Samuel Reyes, Peru.
+        </p>
+        <p id="lastModified">Última modificación: </p>
+    </footer>
+
+    <script>
+        // JavaScript para obtener el año actual y la fecha de última modificación
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent += document.lastModified;
+    </script>
+</body>
+</html>
