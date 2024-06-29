@@ -5,44 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover the essentials of JavaScript on this introductory webpage. Explore how JavaScript enhances web interactivity, manipulates DOM elements, and handles events effectively.">
     <meta name="author" content="Samuel Reyes">
-    <title>Macchu Picchu</title>
+    <title>CUZCO-MACCHUPICHU</title>
     <link rel="stylesheet" href="styles/place.css">
     <script defer src="scripts/place.js"></script>
-
-    <!-- Enlaces para Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
         <h1>Macchu Picchu</h1>
-        <img src="images/CUZCO-MACCHUPICHU.jpeg" alt="" width="100%">
+        <img src="images/CUZCO-MACCHUPICHU.jpeg" alt="imagen del cuzco">
     </header>
     <main>
         <section>
             <h2>Data</h2>
             <ul>
-                <li>Population</li>
-                <li>Capital</li>
-                <li>Languages</li>
-                <li>Currency</li>
-                <li>Time Zone</li>
+                <li>Population:</li>
+                <li>Capital:</li>
+                <li>Languages:</li>
+                <li>Currency:</li>
+                <li>Time Zone:</li>
                 <li>Calling Code: +261</li>
                 <li>Internet TLD: .mg</li>
             </ul>
         </section>
         <section>
             <h2>Weather</h2>
-            <ul>
+            <ul id="weather-details">
                 <li>Temperature: 10 °C</li>
                 <li>Conditions:</li>
                 <li>Wind:</li>
-                <li>Wind Chill:</li>
+                <li>Wind Chill: <span id="wind-chill">N/A</span></li>
             </ul>
-        </section>
-        <section class="grid-bottom-right">
-            <!-- Contenido opcional para la sección inferior derecha -->
         </section>
     </main>
     <footer>
@@ -52,10 +45,6 @@
         <p id="lastModified">Última modificación: </p>
     </footer>
 
-    <script>
-        // JavaScript para obtener el año actual y la fecha de última modificación
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent += document.lastModified;
-    </script>
+    <script src="scripts/place.js"></script>
 </body>
 </html>

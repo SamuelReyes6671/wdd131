@@ -1,84 +1,110 @@
+/* Global CSS variables */
 :root {
-    --background-dark: #1a1a1a; /* Color de fondo oscuro */
-    --header-background: #333; /* Fondo oscuro para el encabezado */
-    --overlay-color: rgba(255, 255, 255, 0.5); /* Color de fondo semitransparente */
-    --overlay-text-color: white; /* Color de texto para los overlays */
+    --primary-color: #D21034; /* Red color from Madagascar's flag */
+    --secondary-color: #276A90; /* Blue color from Madagascar's flag */
+    --background-color: #F0F0F0; /* Light background color */
+    --text-color: #333; /* Dark text color */
 }
 
-/* Estilos específicos para pantallas más grandes */
+/* Basic styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media queries for responsiveness */
 @media only screen and (min-width: 768px) {
-
-    /* Reset de márgenes para el body y otros elementos */
-    body, h1, h2, ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Establecer color de texto blanco y fondo oscuro */
     body {
-        color: white;
-        font-family: Arial, sans-serif;
-        background-color: var(--background-dark); /* Utiliza la variable para el fondo oscuro */
-        display: grid;
-        grid-template-rows: auto 1fr auto; /* Diseño de grid con fila automática para header y footer */
-        min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
-        position: relative; /* Posición relativa para alinear elementos hijos */
-    }
-
-    /* Estilos para el encabezado */
-    header {
-        background-color: var(--header-background); /* Utiliza la variable para el fondo del encabezado */
         padding: 20px;
-        text-align: center;
-        grid-row: 1; /* Se coloca en la primera fila */
-        grid-column: 1 / -1; /* Ocupa todas las columnas */
     }
 
     header h1 {
-        margin-bottom: 10px; /* Espacio inferior para separación */
-        font-size: 2.5rem; /* Tamaño grande para el título principal */
-        text-transform: uppercase; /* Convertir el texto en mayúsculas */
+        font-size: 3rem;
     }
 
-    /* Estilo para la imagen de fondo */
-    header::after {
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .grid-bottom-right {
+        position: relative;
+    }
+
+    .grid-bottom-right::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('images/CUZCO-MACCHUPICHU.jpeg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.5; /* Opacidad para que el texto sea legible */
-        z-index: -1; /* Poner detrás de otros elementos */
-    }
-
-    /* Estilos para los grids en las esquinas */
-    .grid-top-left,
-    .grid-bottom-right {
-        position: absolute;
-        width: 150px; /* Ancho del grid */
-        height: 150px; /* Alto del grid */
-        background-color: var(--overlay-color); /* Utiliza la variable para el color semitransparente */
-        border-radius: 10px; /* Borde redondeado */
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.2rem;
         font-weight: bold;
-        color: var(--overlay-text-color); /* Utiliza la variable para el color de texto */
+        bottom: 20px;
+        right: 20px;
     }
+}
 
-    .grid-top-left {
-        top: 20px; /* Alineación en la esquina superior izquierda */
-        left: 20px; /* Alineación en la esquina superior izquierda */
-    }
+/* Pseudo-element for weather icon */
+#weather-details li:nth-of-type(3)::after {
+    content: '\2600'; /* Unicode for a sun icon, adjust as per your weather icon set */
+    margin-left: 5px;
+}
 
-    .grid-bottom-right {
-        bottom: 20px; /* Alineación en la esquina inferior derecha */
-        right: 20px; /* Alineación en la esquina inferior derecha */
-    }
-
+/* Adjust image size */
+header img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
 }
