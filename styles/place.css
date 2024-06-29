@@ -1,4 +1,7 @@
-/* Reset de márgenes para el body y otros elementos */
+/* Estilos específicos para pantallas más grandes */
+@media only screen and (min-width: 768px) {
+ 
+    /* Reset de márgenes para el body y otros elementos */
 body, h1, h2, ul {
     margin: 0;
     padding: 0;
@@ -69,3 +72,6 @@ header::after {
     bottom: 20px; /* Alineación en la esquina inferior derecha */
     right: 20px; /* Alineación en la esquina inferior derecha */
 }
+
+}
+
