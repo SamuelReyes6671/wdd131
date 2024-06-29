@@ -27,23 +27,20 @@ function setupPage() {
     displayLastModified(); // Mostrar última modificación
     displayCurrentYear(); // Mostrar año actual
 
-    // Obtener elementos relevantes del DOM
-    const temperatureElement = document.querySelector('#weather-details li:nth-of-type(1)');
-    const windSpeedElement = document.querySelector('#weather-details li:nth-of-type(3)');
-    const windChillElement = document.getElementById('wind-chill');
-
-    // Valores estáticos para temperatura y velocidad del viento
-    const temperature = 10; // Cambiar según la temperatura actual
+    // Valores estáticos para la temperatura y la velocidad del viento en el Cuzco
+    const temperature = 20; // Cambiar según la temperatura actual
+    const conditions = 'Clear'; // Cambiar según las condiciones climáticas actuales
     const windSpeed = 5; // Cambiar según la velocidad del viento actual
     const unit = 'metric'; // Cambiar a 'imperial' si se usa el sistema imperial
 
-    // Mostrar la temperatura y velocidad del viento en la sección de Weather
-    temperatureElement.textContent = `Temperature: ${temperature} °C`;
-    windSpeedElement.textContent = `Wind: ${windSpeed} km/h`;
+    // Mostrar la temperatura y condiciones climáticas en la sección de Weather
+    document.getElementById('temperature').textContent = `${temperature} °C`;
+    document.getElementById('conditions').textContent = conditions;
+    document.getElementById('wind-speed').textContent = `${windSpeed} km/h`;
 
     // Calcular y mostrar el factor de sensación térmica (windchill)
     const windChill = calculateWindChill(temperature, windSpeed, unit);
-    windChillElement.textContent = `Wind Chill: ${windChill}`;
+    document.getElementById('wind-chill').textContent = `Wind Chill: ${windChill}`;
 }
 
 // Llamar a la función setupPage cuando se cargue completamente la página

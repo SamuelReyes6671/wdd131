@@ -3,52 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the essentials of JavaScript on this introductory webpage. Explore how JavaScript enhances web interactivity, manipulates DOM elements, and handles events effectively.">
-    <meta name="author" content="Samuel Reyes">
-    <title>CUZCO-MACCHUPICHU</title>
+    <meta name="description" content="Información climática del Cuzco">
+    <meta name="author" content="Tu Nombre">
+    <title>Clima en el Cuzco</title>
     <link rel="stylesheet" href="styles/place.css">
     <script defer src="scripts/place.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    
 </head>
 <body>
     <header>
-        <h1>Macchu Picchu</h1>
-        <img src="images/CUZCO-MACCHUPICHU.jpeg" alt="imagen del cuzco">
+        <h1>Cuzco -  Macchu Picchu</h1>
+        <img src="images/CUZCO-MACCHUPICHU.jpeg" alt="Imagen del Cuzco">
     </header>
     <main>
-        <section>
+        <section id="data-section">
             <h2>Data</h2>
             <ul>
-                <li>Population:</li>
-                <li>Capital:</li>
-                <li>Languages:</li>
-                <li>Currency:</li>
-                <li>Time Zone:</li>
-                <li>Calling Code: +261</li>
-                <li>Internet TLD: .mg</li>
+                <li>Population: 500,000</li>
+                <li>Capital: Cuzco</li>
+                <li>Languages: Spanish, Quechua</li>
+                <li>Currency: Peruvian Sol (PEN)</li>
+                <li>Time Zone: UTC-5</li>
+                <li>Calling Code: +51</li>
+                <li>Internet TLD: .pe</li>
             </ul>
         </section>
-        <section>
+        <section id="weather-section">
             <h2>Weather</h2>
             <ul id="weather-details">
-                <li>Temperature: 10 °C</li>
-                <li>Conditions:</li>
-                <li>Wind:</li>
+                <li>Temperature: <span id="temperature">20 °C</span></li>
+                <li>Conditions: <span id="conditions">Clear</span></li>
+                <li>Wind: <span id="wind-speed">5 km/h</span></li>
                 <li>Wind Chill: <span id="wind-chill">N/A</span></li>
             </ul>
         </section>
     </main>
     <footer>
         <p>
-            <span id="currentyear"></span> &copy; Samuel Reyes, Peru.
+            <span id="currentyear"></span> &copy; Samuel Reyes Condori, Cuzco, Peru.
         </p>
         <p id="lastModified">Última modificación: </p>
     </footer>
-
-    <script src="scripts/place.js"></script>
 </body>
 </html>
