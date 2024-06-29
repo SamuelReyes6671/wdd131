@@ -96,6 +96,10 @@ footer {
         right: 20px;
     }
 }
+#weather-section img {
+    max-width: 100px; /* Ajusta el tamaño máximo según tus preferencias */
+    height: auto; /* Esto asegura que la altura se ajuste automáticamente proporcionalmente */
+}
 
 /* Pseudo-element for weather icon */
 #weather-details li:nth-of-type(3)::after {
