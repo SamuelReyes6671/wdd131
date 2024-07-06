@@ -1,0 +1,54 @@
+@media (min-width: 740px){
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav{
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    nav a{
+        flex: 1 1 100%;
+
+    }
+
+    nav ul{ 
+        display:flex;
+        align-items: center;
+
+
+    }
+    nav ul li {
+		flex: 1 1 100%;
+	}
+    img{
+        box-sizing: content-box;
+    }
+    .container_stdlf {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+        
+    }
+    .temple-name {
+        font-size: large;
+        font-weight: bold;
+    }
+    .temple-card {
+        text-align: center;
+        align-self: center;
+        
+    }
+    .img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    
+    
+}
