@@ -1,0 +1,248 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Welcome Section */
+#welcome {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#welcome h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+#welcome p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#welcome .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#welcome .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Courses Section */
+#courses {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.course {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.course h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.course .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.course .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Teaching Team */
+#team {
+    padding: 80px 0;
+}
+
+.teacher {
+    text-align: center;
+}
+
+.teacher-img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.teacher h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.teacher p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-submit {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Social Media Icons */
+.social-media {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-media li a:hover {
+    background-color: #0056b3;
+}
+
+.circular-img {
+    border-radius: 50%;
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: 150px; /* Ajusta el tamaño según sea necesario */
+    object-fit: cover; /* Para asegurar que la imagen cubra el círculo */
+    display: block; /* Para evitar espacios no deseados alrededor de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .social-media li a {
+        font-size: 1.2rem;
+    }
+}
